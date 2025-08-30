@@ -1,9 +1,10 @@
 import express from "express";
-import { requestCount } from "./monitoring/requestCount";
+import { activeCount, requestCount } from "./monitoring/requestCount";
 import client from 'prom-client';
 
 const app = express();
 app.use(requestCount);
+app.use(activeCount);
 
 app.get("/", (req, res) => {
     res.send("Hello World!");
