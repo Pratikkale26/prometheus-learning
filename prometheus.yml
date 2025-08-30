@@ -1,0 +1,8 @@
+global:
+  scrape_interval: 15s # How frequently to scrape targets
+
+scrape_configs:
+  - job_name: 'nodejs-app'
+    static_configs:
+      - targets: ['node-app:3000'] #changed the name here 'localhost' -> 'node-app', because the container name (docker talk to each other via names)
+      
