@@ -10,7 +10,7 @@ const requestCounter = new client.Counter({
 export function requestCount(req: Request, res: Response, next: NextFunction) {
     requestCounter.inc({
         method: req.method,
-        route: req.route.path,
+        route: req.path,
         status_code: res.statusCode
     })
     next();
