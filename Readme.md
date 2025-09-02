@@ -7,6 +7,7 @@ This project is a Node.js application that utilizes the Express framework to cre
 * A simple web server with three endpoints: `/`, `/user`, and `/metrics`
 * Prometheus integration for collecting metrics on request count, active users, and request duration
 * Docker support for easy deployment and management
+* Grafana integration for visualization of metrics
 
 ## Getting Started
 
@@ -15,6 +16,7 @@ This project is a Node.js application that utilizes the Express framework to cre
 * Node.js
 * Docker 
 * Prometheus
+* Grafana
 
 ### Installation
 
@@ -25,6 +27,7 @@ This project is a Node.js application that utilizes the Express framework to cre
 
 1. Access the web server: `http://localhost:3000`
 2. View metrics: `http://localhost:9090` (Prometheus UI)
+3. Access Grafana: `http://localhost:3001` (Grafana UI)
 
 ## Configuration
 
@@ -36,6 +39,10 @@ This project is a Node.js application that utilizes the Express framework to cre
 ### Prometheus Configuration
 
 * `prometheus.yml`: The configuration file for Prometheus (located in the root directory)
+
+### Grafana Configuration
+
+* `GF_SECURITY_ADMIN_PASSWORD`: The admin password for Grafana (default: admin)
 
 ## Monitoring and Metrics
 
@@ -60,6 +67,7 @@ This project is a Node.js application that utilizes the Express framework to cre
 
 * `node-app`: The Node.js application
 * `prometheus`: The Prometheus server
+* `grafana`: The Grafana server
 
 ### Networks
 
